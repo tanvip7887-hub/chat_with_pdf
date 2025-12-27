@@ -1,21 +1,21 @@
 📘 Chat with Your PDF Using AI – Python + LangChain + Local LLM (Flask UI)
 
-This project allows you to chat with any PDF file locally using Python, LangChain, FAISS, and a lightweight local LLM (TinyLlama).
-You can upload a PDF, ask questions, and get meaningful responses — all offline, without using any external APIs.
+This project lets you chat with any PDF file locally using Python, LangChain, FAISS, and a lightweight TinyLlama LLM.
+You can upload a PDF, ask questions, and get meaningful answers — fully offline and without depending on external APIs.
 
 🎯 Features
 
-Upload and preview PDF files
+Upload and extract text from PDF files
 
-Ask questions and get accurate, contextual answers
+Ask questions and receive context-based answers
 
-Works fully offline with a local LLM
+Works completely offline with a local LLM
 
-Real-time typing effect for replies
+Typing animation for responses
 
-Clear chat option
+Option to clear chat
 
-Simple Flask web interface
+Simple Flask-based web interface
 
 🛠️ Tech Stack
 Backend
@@ -26,13 +26,13 @@ Flask
 
 LangChain
 
-TinyLlama (local model with ctransformers)
+TinyLlama (local GGUF model using ctransformers)
 
-FAISS (vector search)
+FAISS for vector search
 
 Sentence Transformers
 
-PyMuPDF
+PyMuPDF for PDF reading
 
 Frontend
 
@@ -50,30 +50,28 @@ sentence-transformers
 PyMuPDF
 ctransformers
 
-🚀 Installation & Setup
-1️⃣ Clone or Download the Project
-git clone https://github.com/your-username/chat-with-pdf-ai.git
-cd chat-with-pdf-ai
+🚀 Setup Instructions
+1️⃣ Install the project dependencies
 
-2️⃣ Install Dependencies
+Create a virtual environment (optional) and install the required packages:
+
 pip install -r requirements.txt
 
-3️⃣ Add the Local LLM Model
+2️⃣ Add the Local LLM Model
 
-Download the TinyLlama GGUF model:
+Place this model file inside the models folder:
 
 tinyllama-1.1b-chat-v1.0.Q4_0.gguf
 
-Place it inside the models/ folder:
+Folder structure example:
 
-project/
-└── models/
-      tinyllama-1.1b-chat-v1.0.Q4_0.gguf
+models/
+   tinyllama-1.1b-chat-v1.0.Q4_0.gguf
 
-4️⃣ Run the Flask App
+3️⃣ Run the Flask Application
 python app.py
 
-5️⃣ Open in Browser
+4️⃣ Open in your browser
 http://127.0.0.1:5000
 
 📁 Folder Structure
@@ -88,6 +86,6 @@ project/
 │   └── index.html
 └── requirements.txt
 
-💡 Why I Built This Project
+💡 Personal Note
 
-By doing this project, I am learning how Flask works, how local LLMs run, and how to connect them with LangChain, embeddings, and vector search.
+I built this project to learn how Flask works, how to use local LLMs, and how to connect PDFs, embeddings, and vector search using LangChain.
